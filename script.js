@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 async function fetchUserData(filter) {
 
 
-  const response = await fetch(`http://localhost:3000/api/getUsers`)
+  const response = await fetch(`https://pipe-connect-fhpouvuhua-uw.a.run.app//api/getUsers`)
 
   let data = await response.json()
 
@@ -25,7 +25,7 @@ async function fetchUserData(filter) {
 async function fetchPeople(filter) {
 
 
-  const response = await fetch(`http://localhost:3000/api/data?name=${filter}`)
+  const response = await fetch(`https://pipe-connect-fhpouvuhua-uw.a.run.app//api/data?name=${filter}`)
 
   let data = await response.json()
 
@@ -78,7 +78,7 @@ async function showPersonInfo(person) {
   document.getElementById("sendRequestBtn").addEventListener("click", async function () {
     var user_ele = document.getElementById("username");
 
-    const res = await fetch(`http://localhost:3000/api/data/subscribe?userID=${user_ele.value}&personID=${person.item.id}`,{
+    const res = await fetch(`https://pipe-connect-fhpouvuhua-uw.a.run.app//api/data/subscribe?userID=${user_ele.value}&personID=${person.item.id}`,{
       method: 'POST'
     })
     const data=  await res.json()
